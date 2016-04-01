@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -yq \
     cowsay && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Configuration for supervisord
+COPY supervisord.conf /usr/local/etc/supervisord.conf
+
+# Our app will reside here
 WORKDIR /app
 
 # package.json is copied separately to enable better docker build caching
