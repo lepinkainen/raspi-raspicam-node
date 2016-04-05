@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# enable camera
+echo "Enabling raspi camera module"
 modprobe bcm2835-v4l2
 
 #Set the root password as root if not set as an ENV variable (for dropbear)

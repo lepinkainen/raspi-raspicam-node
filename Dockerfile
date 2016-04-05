@@ -1,7 +1,7 @@
 FROM resin/raspberrypi-node:latest
 
 # Use apt-get to install any dependencies
-RUN apt-get update && apt-get install -yq \
+RUN apt-get update && apt-get dist-upgrade && apt-get install -yq \
     python \
     mosquitto-clients \
     dropbear \
