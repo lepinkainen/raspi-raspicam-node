@@ -3,9 +3,13 @@ FROM resin/raspberrypi-node:latest
 # Use apt-get to install any dependencies
 RUN apt-get update && apt-get dist-upgrade && apt-get install -yq \
     python \
+    libraspberrypi-bin \
     mosquitto-clients \
     dropbear \
     supervisor \
+    i2c-tools \
+    ibi2c-dev \
+    python-smbus \
     cowsay && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
