@@ -6,13 +6,17 @@
     "url": "https://github.com/lepinkainen/FOOBAR"
   },
   "scripts": {
-    "start": "node adc.js"
+    "start": "node adc.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "version": "0.1.0",
   "dependencies": {
-      "onoff": "latest",
-      "express": "latest",
-      "mqtt": "latest",
-      "raspicam": "latest"
-  }
+    "onoff": "latest",
+    "express": "latest",
+    "mqtt": "latest",
+    "raspicam": "latest",
+    "snyk": "^1.192.3"
+  },
+  "snyk": true
 }
